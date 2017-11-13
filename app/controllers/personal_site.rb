@@ -6,5 +6,4 @@ class PersonalSite
     ['200', {'Content-Type' => 'text/html'}, ['Welcome!']]
   end
 
-
 end
