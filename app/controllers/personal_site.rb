@@ -14,6 +14,7 @@ class PersonalSite
   def self.about
     render_view('about.html')
   end
+  
   def self.index
      render_view('index.html')
   end
