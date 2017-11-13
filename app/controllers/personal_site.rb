@@ -7,8 +7,9 @@ class PersonalSite
    when '/' then index
    when '/about' then about
    when '/main.css' then css
+   when '/about.css' then css_about
    else
-    error
+    error    
    end
   end
 
@@ -16,10 +17,14 @@ class PersonalSite
     render_static('main.css')
   end
 
+  def self.css_about
+    render_static('about.css')
+  end
+
   def self.render_static(asset)
     [200, {'Content-Type' => 'text/html'}, [File.read("./public/#{asset}")]]
   end
-  
+
   def self.about
     render_view('about.html')
   end
